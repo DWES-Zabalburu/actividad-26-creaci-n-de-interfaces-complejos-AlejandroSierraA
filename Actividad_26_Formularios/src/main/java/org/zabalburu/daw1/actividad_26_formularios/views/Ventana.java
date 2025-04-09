@@ -109,8 +109,12 @@ public class Ventana extends JFrame{
         btnGuardar.setBackground(COLOR_FONDO);
         btnGuardar.setForeground(Color.WHITE);
         btnCancelar.setForeground(Color.WHITE);
-        btnCancelar.setHorizontalAlignment(JLabel.RIGHT);
+        btnCancelar.setHorizontalAlignment(JLabel.CENTER);
         pnlBotones.setBorder(new EmptyBorder(20, 20, 20, 20));
         btnCancelar.setBackground(new Color(189,195,199,255));
+        for(Component c : pnlBotones.getComponents()){
+            JButton b = (JButton) c;
+            b.setPreferredSize(new Dimension(140,40));
+        }
     }
 }
